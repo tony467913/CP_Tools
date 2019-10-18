@@ -609,11 +609,13 @@ ul.alt li {
 /* Table */
 .table-wrapper {
   -webkit-overflow-scrolling: touch;
-  overflow-x: auto; }
+  overflow-x: auto;
+   }
 
 table {
   margin: 0 0 2rem 0;
-  width: 100%; }
+  width: 100%; 
+  table-layout: auto;}
   table tbody tr {
     border: solid 1px;
     border-left: 0;
