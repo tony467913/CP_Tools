@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Vista MFG Check</title>
+		<title>Vista Plus MFG Check</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -37,7 +37,7 @@
 
 		<!-- Heading -->
 			<div id="heading" >
-				<h1>Vista MFG Check</h1>
+				<h1>Vista Plus MFG Check</h1>
 			</div>
 
 		<!-- Main -->
@@ -45,7 +45,7 @@
 				<div class="inner">
 					<div class="content">
 						<header>
-							<h2>Vista</h2>
+							<h2>Vista Plus</h2>
 						</header>
 									<div class="table-wrapper">
 										<table class="alt">
@@ -69,7 +69,7 @@
     												<td><input type="number" id="PW_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
     												<td id="PW_result"></td>
     												<td id="PW_note"></td>
-    												<td><button class="button primary" id="PW_btn" onclick="getPW_Result()">Click here!</button></td>
+    												<td><button class="button primary" id="PW_btn" onclick="getVP_PW_Result()">Click here!</button></td>
 												</tr>
 												<tr id="hideSH" style="display:table-row">
     												<td>SH</td>
@@ -77,7 +77,7 @@
     												<td><input type="number" id="SH_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
     												<td id="SH_result"></td>
     												<td id="SH_note"></td>
-    												<td><button class="button primary" id="SH_btn" onclick="getSH_Result()">Click here!</button></td>
+    												<td><button class="button primary" id="SH_btn" onclick="getVP_SH_Result()">Click here!</button></td>
   												</tr>  
   												<tr id="hideXO" style="display:table-row">
     												<td>XO, OX</td>
@@ -85,7 +85,7 @@
     												<td><input type="number" id="XO_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
     												<td id="XO_result"></td>
     												<td id="XO_note"></td>
-    												<td><button class="button primary" id="XO_btn" onclick="getXO_Result()">Click here!</button></td>
+    												<td><button class="button primary" id="XO_btn" onclick="getVP_XO_Result()">Click here!</button></td>
   												</tr>
 
   <tr id="hideEQXOX" style="display:table-row">
@@ -94,7 +94,7 @@
     <td><input type="number" id="EQXOX_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
     <td id="EQXOX_result"></td>
     <td id="EQXOX_note"></td>
-    <td><button class="button primary" id="EQXOX_btn" onclick="getEQXOX_Result()">Click here!</button></td>
+    <td><button class="button primary" id="EQXOX_btn" onclick="getVP_EQXOX_Result()">Click here!</button></td>
   </tr>
   <tr id="hideUNEQXOX" style="display:table-row">
     <td>UNEQ-XOX</td>
@@ -102,32 +102,25 @@
     <td><input type="number" id="UNEQXOX_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
     <td id="UNEQXOX_result"></td>
     <td id="UNEQXOX_note"></td>
-    <td><button class="button primary" id="UNEQXOX_btn" onclick="getUNEQXOX_Result()">Click here!</button></td>
+    <td><button class="button primary" id="UNEQXOX_btn" onclick="getVP_UNEQXOX_Result()">Click here!</button></td>
   </tr>
-  <tr id="hide2pd" style="display:table-row">
-    <td>Vista SL 2PD</td>
-    <td><input type="number" id="2PD_w" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
-    <td><input type="number" id="2PD_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
-    <td id="2PD_result"></td>
-    <td id="2PD_note"></td>
-    <td><button class="button primary" id="2PD_btn" onclick="get2PD_Result()">Click here!</button></td>
+   <tr id="hideAW" style="display:table-row">
+    <td>AW</td>
+    <td><input type="number" id="AW_w" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
+    <td><input type="number" id="AW_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
+    <td id="AW_result"></td>
+    <td id="AW_note"></td>
+    <td><button class="button primary" id="AW_btn" onclick="getVP_AW_Result()">Click here!</button></td>
   </tr>
-  <tr id="hide3pd" style="display:table-row">
-    <td>Vista SL 3PD</td>
-    <td><input type="number" id="3PD_w" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
-    <td><input type="number" id="3PD_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
-    <td id="3PD_result"></td>
-    <td id="3PD_note"></td>
-    <td><button class="button primary" id="3PD_btn" onclick="get3PD_Result()">Click here!</button></td>
+  <tr id="hideCA" style="display:table-row">
+    <td>CA</td>
+    <td><input type="number" id="CA_w" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
+    <td><input type="number" id="CA_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
+    <td id="CA_result"></td>
+    <td id="CA_note"></td>
+    <td><button class="button primary" id="CA_btn" onclick="getVP_CA_Result()">Click here!</button></td>
   </tr>
-  <tr id="hide4pd" style="display:table-row">
-    <td>Vista SL 4PD</td>
-    <td><input type="number" id="4PD_w" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
-    <td><input type="number" id="4PD_h" autocomplete="off" class="Calc_input" placeholder=" " value="" style="font-size: 24px; width: 72px;"></td>
-    <td id="4PD_result"></td>
-    <td id="4PD_note"></td>
-    <td><button class="button primary" id="4PD_btn" onclick="get4PD_Result()">Click here!</button></td>
-  </tr>
+
 											</tbody>
 									<!-- 		<tfoot>
 												<tr>
